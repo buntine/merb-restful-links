@@ -1,0 +1,15 @@
+=================================
+ merb-restful-links 0.0.1
+=================================
+
+By Andrew Buntine
+
+A plugin for Merb that allows you to supply a ":method" option to the link_to method. It accepts :put and :delete and will work in the same fashion as Rails. That is, on the onclick event, a temporary form will be constructed (using JavaScpript) with a hidden field named "_method". The form is automatically submitted so the user experience will not change.
+
+For example:
+
+  link_to "Delete", url(:post, 1), :method => :delete
+
+Or:
+
+  link_to "Save changes", url(:post, 1), :method => :put
